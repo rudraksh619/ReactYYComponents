@@ -1,3 +1,4 @@
+import AdvancedFilter from "./components/AdavancedFilter"
 import Colorpicker from "./components/Colorpicker"
 import Counter from "./components/Counter"
 
@@ -26,10 +27,7 @@ function App() {
 
   return (
     <>
-   <Todo/>
-
-
-
+    <AdvancedFilter/>
     </>
   )
 }
