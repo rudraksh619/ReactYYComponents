@@ -1,27 +1,24 @@
-import React, { useCallback, useState } from 'react'
+import React from "react";
 
 
-    const Child = React.memo(({print})=>{
-        print(); 
-    })
-
-
-const ReactMemo = () => {
-
-
-
-   const print = useCallback( ()=>{
-        console.log("print from the child side");
-    },[])
-
-    const[state , setstate ] = useState(0);
-
-  return (
-    <div>
-      <button onClick={()=>setstate(state+1)}>make Rerender</button>
-      <Child print = {print}/>
-    </div>
+const TestMemoo = ()=>{
+  const calc = (a)=>{
+    let sum = a;
+    for(let i =0 ;i<10006000780;i++)
+    {
+    sum+=i;
+    }
+  console.log(sum);
+  }
+  React.useMemo(()=>{calc(10)},[10])
+  const [counter , setcounter] = React.useState(0);
+  return(
+    <>
+    <button onClick={()=> setcounter(counter+1)}>re render</button>
+    <h1>Test Memo</h1>
+    </>
+    
   )
 }
 
-export default ReactMemo
+export default TestMemoo;
