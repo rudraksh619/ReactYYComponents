@@ -29,6 +29,9 @@ import Accordian from "./components/Accordian"
 import Box from "./components/UseLayout"
 import ModelParent from "./components/Model"
 import Tab from "./components/Tab"
+import Throotling from "./components/Throtlling"
+import Spa from "./components/Spa"
+import ReduxCounter from "./components/ReducCounter"
 
 
 function App() {
@@ -36,7 +39,7 @@ function App() {
 
   return (
     <>
-    <Tab/>
+   <ReduxCounter/>
     </>
   )
 }
